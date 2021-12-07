@@ -1,17 +1,17 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:music_band/routes.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
 String name = "";
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,14 +25,14 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: <Widget>[
                 Image.asset(
-                  'assets/images/login_image.png',
+                  'assets/images/register_image.png',
                   fit: BoxFit.cover,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  'Welcome to Music-Band',
+                const Text(
+                  'Register',
                   style: TextStyle(
                     color: Colors.deepPurple,
                     fontSize: 24,
@@ -46,46 +46,62 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: <Widget>[
                       TextFormField(
-                        decoration: InputDecoration(
-                          hintText: "Enter Your Name",
-                          labelText: "Username",
+                        decoration: const InputDecoration(
+                          hintText: 'Enter your name',
+                          labelText: 'Name',
                         ),
-                        // onChanged: (value) {
-                        //   name = value;
-                        //   setState(() {});
-                        // },
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Address',
+                          hintText: 'Enter Your Address',
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'User Name',
+                          hintText: 'Enter Your Name',
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 0, vertical: 20),
                         child: TextFormField(
                           obscureText: true,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "Enter Password",
                             labelText: "Password",
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.pushNamed(context, MyRoutes.welcome);
                         },
-                        child: Text('Login'),
+                        child: const Text('Login'),
                         style: TextButton.styleFrom(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                           shadowColor: Colors.deepPurple,
-                          minimumSize: Size(150, 45),
+                          minimumSize: const Size(150, 45),
                           backgroundColor: Colors.deepPurple[600],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Text(
+                      const Text(
                         "Haven't an account Make One",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -93,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.register);
+                          Navigator.pushNamed(context, MyRoutes.welcome);
                         },
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.white, elevation: 0),
