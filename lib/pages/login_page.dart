@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20,
                 ),
                 Text(
-                  'Welcome to Music-Band',
+                  'Welcome',
                   style: TextStyle(
                     color: Colors.deepPurple,
                     fontSize: 24,
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.welcome);
+                          Navigator.pushNamed(context, MyRoutes.bookband);
                         },
                         child: Text('Login'),
                         style: TextButton.styleFrom(

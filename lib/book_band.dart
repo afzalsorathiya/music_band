@@ -2,16 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:music_band/routes.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class BookBand extends StatefulWidget {
+  const BookBand({Key? key}) : super(key: key);
 
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  _BookBandState createState() => _BookBandState();
 }
 
-String name = "";
-
-class _RegisterPageState extends State<RegisterPage> {
+class _BookBandState extends State<BookBand> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,11 +23,11 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
               children: <Widget>[
                 Image.asset(
-                  'assets/images/register_image.png',
+                  'assets/images/book_band.png',
                   fit: BoxFit.cover,
                 ),
                 const Text(
-                  'Register',
+                  'Book Band',
                   style: TextStyle(
                     color: Colors.deepPurple,
                     fontSize: 24,
@@ -55,27 +53,43 @@ class _RegisterPageState extends State<RegisterPage> {
                       const TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Username',
+                          labelText: 'Address',
                         ),
                       ),
                       const SizedBox(
                         height: 20,
                       ),
                       const TextField(
-                        obscureText: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Password',
+                          labelText: 'purpose',
                         ),
                       ),
                       const SizedBox(
                         height: 20,
                       ),
                       const TextField(
-                        obscureText: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'confirm Password',
+                          labelText: 'Cost',
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Date',
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Contact Info',
                         ),
                       ),
                       const SizedBox(
@@ -83,9 +97,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.bookband);
+                          Navigator.pushNamed(context, MyRoutes.bookfinal);
                         },
-                        child: const Text('Register'),
+                        child: const Text('Book'),
                         style: TextButton.styleFrom(
                           textStyle: const TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
@@ -94,17 +108,6 @@ class _RegisterPageState extends State<RegisterPage> {
                           backgroundColor: Colors.deepPurple[600],
                         ),
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, MyRoutes.login);
-                        },
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.white, elevation: 0),
-                        child: Text(
-                          'Back Login',
-                          style: TextStyle(color: Colors.deepPurple[600]),
-                        ),
-                      )
                     ],
                   ),
                 ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_band/pages/register_page.dart';
 import 'package:music_band/routes.dart';
-import 'package:music_band/welcome.dart';
+import 'package:music_band/book_band.dart';
+import 'package:music_band/final.dart';
 import 'pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.register: (context) => const RegisterPage(),
-        MyRoutes.welcome: (context) => const Welcome(),
+        MyRoutes.bookband: (context) => const BookBand(),
+        MyRoutes.bookfinal: (context) => const Final(),
       },
     );
   }
